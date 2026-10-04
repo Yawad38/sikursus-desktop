@@ -1,31 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package app;
 
 import java.util.ArrayList;
+import model.Instruktur;
 import model.Orang;
 import model.Peserta;
-import model.Instruktur;
-/**
- *
- * @author USER
- */
+
 public class DemoInheritance {
     public static void main(String[] args) {
-        // Menggunakan ArrayList bertipe Orang untuk menampung Peserta & Instruktur
         ArrayList<Orang> daftarOrang = new ArrayList<>();
 
-        daftarOrang.add(new Peserta(1, "Alya Rahma", "081234567890", "252001", "Informatika"));
-        daftarOrang.add(new Peserta(2, "Rafi Akbar", "081298765432", "252002", "Informatika"));
-        daftarOrang.add(new Instruktur(101, "Dina Pratama", "081211110001", "Java Desktop"));
-        daftarOrang.add(new Instruktur(102, "Rizal Maulana", "081211110002", "Data Science"));
+        daftarOrang.add(new Peserta(
+                1, "Alya Rahma", "081234567890",
+                "252001", "Informatika"));
+
+        daftarOrang.add(new Peserta(
+                2, "Rafi Akbar", "081298765432",
+                "252002", "Informatika"));
+
+        Peserta pesertaUji = new Peserta(
+                3, "Nama Lama", "080000000000",
+                "252003", "Informatika");
+        // Setter milik parent tetap dapat digunakan oleh object Peserta.
+        pesertaUji.setNama("Siti Zahra");
+        daftarOrang.add(pesertaUji);
+
+        daftarOrang.add(new Instruktur(
+                101, "Dina Pratama", "081211110001",
+                "Java Desktop"));
+
+        daftarOrang.add(new Instruktur(
+                102, "Rizal Maulana", "081211110002",
+                "Data Science"));
 
         System.out.println("=== DATA SIKURSUS ===");
         for (Orang orang : daftarOrang) {
             System.out.println(orang.getInfo());
         }
+
+        System.out.println("Jumlah object: " + daftarOrang.size());
     }
 }
