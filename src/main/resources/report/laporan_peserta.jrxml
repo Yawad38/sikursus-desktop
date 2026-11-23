@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporan_peserta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47a93fc4-cf82-46f2-a171-5a5fd1ce34e9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIKURSUS MySQL"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+  id_peserta,
+  nim,
+  nama,
+  jenis_kelamin,
+  prodi,
+  no_hp,
+  email
+FROM peserta
+ORDER BY nama ASC]]>
+	</queryString>
+	<field name="id_peserta" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_peserta"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_peserta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="nim" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nim"/>
+		<property name="com.jaspersoft.studio.field.label" value="nim"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="jenis_kelamin"/>
+		<property name="com.jaspersoft.studio.field.label" value="jenis_kelamin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="prodi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="prodi"/>
+		<property name="com.jaspersoft.studio.field.label" value="prodi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="no_hp"/>
+		<property name="com.jaspersoft.studio.field.label" value="no_hp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="peserta"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="21" width="380" height="45" uuid="995b0409-0c81-4134-9b7f-b6b273460ca8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PESERTA KURSUS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="2" width="260" height="30" uuid="dc188c6e-17c3-411b-b344-985e04f16e08"/>
+				<text><![CDATA[SIKURSUS Desktop - Pemrograman Berorientasi Objek]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="18" width="23" height="16" uuid="92b25733-7f12-4094-b964-333281071e56"/>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="19" width="23" height="15" uuid="96338d03-a359-4c1f-9031-9b72ed6279c5"/>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="20" width="30" height="16" uuid="95d370fa-d7f3-41db-8580-73bbd3ceb692"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="18" width="23" height="16" uuid="4b6f5cd1-2fe5-4132-b7cc-ef3668dc444e"/>
+				<text><![CDATA[JK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="19" width="30" height="14" uuid="660dc49d-f5d7-4c20-a0a2-f5ccf421d494"/>
+				<text><![CDATA[Prodi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="19" width="40" height="18" uuid="5f2484a0-0bfc-4fcf-84ff-79f19291e7e7"/>
+				<text><![CDATA[No. HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="18" width="43" height="19" uuid="52846bd1-8754-48f9-8ed0-fb4a84a6c0cf"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="20" width="50" height="30" uuid="75c5d5f8-0005-490f-b95e-3799e64b42f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="183aad78-c9a5-4bcb-9cf2-567b6402f4a0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="20" width="140" height="30" uuid="45eb8ce1-3223-415b-ba49-5a92c54d2005">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79757028-0806-447d-92a2-80792d9849de"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="21" width="40" height="49" uuid="68f192bd-eab1-4f60-b27e-795d9d08a63e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50b1f03a-e99e-46c3-8034-51640cdf1ff3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="19" width="86" height="30" uuid="a31f3b2a-38fa-42f5-a87c-cc99c237c637">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4669efd-b1ff-466c-874d-866edebdc9db"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="19" width="89" height="30" uuid="016f3a1a-55eb-4336-bf6d-0e5e3c54d857">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53fb684b-e8f7-48de-b31f-d5c6a6e28835"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="17" width="90" height="52" uuid="74bcc2c0-4947-4f77-9141-a642ade32b4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea83eb7a-8353-4e98-a514-e891d54d00be"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="35" height="89" uuid="3f1b4249-fdca-41c4-be5b-9c71458c44ab"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

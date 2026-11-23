@@ -75,10 +75,6 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Password");
 
-        txtUsername.setText("Your Username");
-
-        pwdPassword.setText("****");
-
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
