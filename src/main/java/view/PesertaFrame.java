@@ -794,20 +794,36 @@ public class PesertaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCariActionPerformed
 
     private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
-        String keyword = txtCari.getText().trim();
-        try {
-            if (keyword.isEmpty()) {
-                loadTable();
-            } else {
-                fillTable(dao.search(keyword));
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Pencarian gagal: " + ex.getMessage(), "Database Error", JOptionPane.ERROR_MESSAGE);
+        int row = tblPeserta.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih satu data peserta terlebih dahulu dari tabel.");
+            return;
         }
+
+        int idTerpilih = Integer.parseInt(tblPeserta.getValueAt(row, 0).toString());
+        System.out.println("ID terpilih: " + idTerpilih);
+
+        report.ReportService.cetakPendaftaran(idTerpilih);
     }//GEN-LAST:event_btnCariActionPerformed
 
     private void btnCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakActionPerformed
-        report.ReportService.tampilkanLaporanPeserta();
+    // =========================================================================
+        // MINGGU 12 (Master Data Peserta): Pemanggilan laporan semua peserta
+        // report.ReportService.tampilkanLaporanPeserta();
+        // =========================================================================
+        
+        // MINGGU 13 (Report Parameter): Cetak laporan pendaftaran berdasarkan ID dari JTable
+        int row = tblPeserta.getSelectedRow();
+        if (row == -1) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Pilih satu data peserta terlebih dahulu dari tabel.");
+            return;
+        }
+        
+        int idTerpilih = Integer.parseInt(tblPeserta.getValueAt(row, 0).toString());
+        System.out.println("ID terpilih: " + idTerpilih);
+        
+        // Panggil laporan pendaftaran relasional ber-parameter
+        report.ReportService.cetakPendaftaran(idTerpilih);
     }//GEN-LAST:event_btnCetakActionPerformed
 
     /**
